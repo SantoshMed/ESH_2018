@@ -15,8 +15,11 @@ export class LandingComponent implements OnInit {
   openPopup(e) {
     if (e.currentTarget.value === '0') {
       this.viewServise.viewModeValue = 'signin';
-    } else {
+      this.viewServise.isResetValue = true;
+    } else if(e.currentTarget.value === '1') {
       this.viewServise.viewModeValue = 'register';
+    }else if(e.currentTarget.value === '2') {
+      this.viewServise.viewModeValue = 'privacy';
     }
     this.viewServise.isVisibleValue = true;
   }

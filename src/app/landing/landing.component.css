@@ -1,3 +1,62 @@
 .smTopM {
     margin-top: 15px;
 }
+
+.footerTop {
+    top: 260px;
+    position: relative;
+    float: left;
+}
+
+@media (min-width: 1440px) and (max-width: 1441px) {
+    .footerTop{
+        top: 395px;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1401px) {
+    .footerTop{
+        top: 375px;
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1367px) {
+    .footerTop{
+        top: 145px;
+    }
+}
+
+@media (min-width: 1152px) and (max-width: 1153px) {
+    .footerTop{
+        top: -16px;
+    }
+}
+
+@media (min-width: 1093px) and (max-width: 1094px) {
+    .footerTop{
+        top: 70px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1025px) {
+    .footerTop{
+        top: 130px;
+    }
+}
+@media (min-width: 960px) and (max-width: 961px) {
+    .footerTop{
+        top: 0px;
+    }
+}
+
+@media  (max-width: 768px) {
+    .footerTop{
+        top: 0px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 824px) and (orientation: landscape) {
+
+    .footerTop{
+        top: 0px;
+    }
+}

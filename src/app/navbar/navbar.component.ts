@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
     private viewService: ViewModeService,
     private service: CountryService
   ) {
-    this.username = localStorage.getItem('name');
+    this.username = sessionStorage.getItem('name');
   }
 
   ngOnInit() {
@@ -23,7 +23,8 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
-    localStorage.removeItem('name');
+    sessionStorage.removeItem('name');
+    sessionStorage.removeItem('email');
     // console.log( this.service.isLoggedIn() );
     this.viewService.isVisibleValue = false;
     this.router.navigate(['/']);

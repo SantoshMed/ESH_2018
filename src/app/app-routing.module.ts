@@ -9,10 +9,14 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { LivewebcastComponent } from './livewebcast/livewebcast.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
     { path: '', component: LandingComponent },
     { path: 'resetpassword', component: ResetPasswordComponent },
+    { path: 'privacy', component: PrivacyComponent },
+    { path: 'terms', component: TermsComponent },
     {
         path: 'landing',
         component: NavbarComponent,
@@ -22,7 +26,7 @@ const routes: Routes = [
             { path: 'speakers', component: SpeakersComponent },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'agenda', component: AgendaComponent },
-            { path: 'livewebcast', component: LivewebcastComponent }
+            { path: 'livewebcast', component: LivewebcastComponent },
         ]
     },
     { path: '**', component: NotFoundComponent }

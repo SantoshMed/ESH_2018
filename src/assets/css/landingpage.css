@@ -217,7 +217,7 @@ h3 {
 .glyphicon-eye-open,
 .glyphicon-eye-close {
     top: 36px !important;
-    left: 93%;
+    left: 89%;
     position: absolute !important;
 }
 
@@ -277,6 +277,24 @@ h3 {
 
 .modal-content {
     border: none !important;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.no-button {
+    display: inline;
+    width: auto;
+    background: none;
+    border: none;
+}
+
+.modal-height {
+    height: 90% !important;
+}
+
+.modal-dialog {
+    height: auto;
 }
 
 .forgotP {
@@ -336,8 +354,7 @@ h3 {
 
 footer {
     background: transparent;
-    position: fixed;
-    bottom: 0px;
+    position: relative;
     width: 100%;
 }
 
@@ -403,7 +420,7 @@ footer img {
 .navbar-nav>.active>a {
     background: transparent !important;
     border-bottom: 2px solid #E8308A;
-    color: #fff !important;
+    color: #E8308A !important;
 }
 
 
@@ -472,7 +489,8 @@ footer img {
     }
     .footerBg {
         position: relative;
-        top: 40px;
+        bottom: -40px;
+    
     }
     .signBtn {
         width: 100% !important;
@@ -489,8 +507,12 @@ footer img {
     }
     .forgotP {
         position: relative;
-        bottom: -5px;
-        left: 110px;
+    bottom: -5px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
     }
     button {
         width: 100%;
@@ -508,7 +530,10 @@ footer img {
     .backTL {
         width: 100%;
         text-align: center;
-        margin-top: 5px;
+        top: 5px;
+        float: left;
+        left: 0;
+        margin-bottom: 20px;
     }
     .mobileWidth2 {
         width: 89%;
@@ -526,9 +551,7 @@ footer img {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    body {
-        background: #A5D7D5 !important;
-    }
+   
     footer {
         background: #fff;
         position: fixed;
@@ -552,12 +575,13 @@ footer img {
         font-weight: bold;
         padding: 15px 30px !important;
     }
+    body{
+        background: #A5D7D5 !important
+    }
 }
 
 @media (min-width: 960px) and (max-width: 961px) {
-    body {
-        background: #A5D7D5 !important;
-    }
+   
     footer {
         background: #fff;
         position: relative;
@@ -579,6 +603,9 @@ footer img {
         height: 400px;
         overflow: auto;
     }
+    body{
+        background: #A5D7D5 !important
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1025px) {
@@ -592,7 +619,7 @@ footer img {
         position: fixed;
         top: 0px;
         left: 0px;
-        background: url(../images/bg-main.png) top left no-repeat;
+        background: url(../images/bg-main.png) 0px -55px no-repeat;
         width: 100%;
         height: 100%;
     }
@@ -610,53 +637,6 @@ footer img {
 }
 
 
-/* @media (max-width: 1024px) and (max-width: 1025px) {
-
-    .bigImg{
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        background: url(../images/bg-main6.png) top left no-repeat;
-        width: 100%;
-        height: 100%;
-    }
-    .ipadFix{
-        overflow: hidden;
-        width: 1024px;
-    }
-    footer {
-        position: relative;
-        font-size: 12px;
-        top: 90px;
-        width: 100%;
-    }
-    .h1, h1 {
-        font-size: 28px !important;
-    }
-    .h3, h3 {
-        font-size: 22px !important;
-    }
-    .h4, h4 {
-        font-size: 14px !important;
-    }
-    .h1, .h2, .h3, h1, h2, h3 {
-        margin-top: 10px !important;
-        margin-bottom: 0px !important;
-    }
-    .mdMarginLeftD {
-        margin-left: 80px;
-    }
-    .leftMargin{
-        margin-left: 160px;
-    }
-    p {
-        margin: 0 0 5px !important;
-    }
-    .modalHeight{
-        height: 400px;
-        overflow: auto;
-    }
-} */
 
 @media (min-width: 1093px) and (max-width: 1094px) {
     .bigImg {
@@ -670,7 +650,7 @@ footer img {
     footer {
         position: relative;
         font-size: 11px;
-        top: 90px;
+    
         width: 100%;
     }
     .h1,
@@ -738,7 +718,7 @@ footer img {
     footer {
         background: transparent;
         position: relative;
-        top: 240px;
+    
         width: 100%;
     }
 }
@@ -812,7 +792,6 @@ footer img {
     }
     footer {
         font-size: 12px;
-        top: 160px;
         position: relative;
     }
     p {
@@ -847,6 +826,7 @@ footer img {
     .greenBG {
         min-height: 610px;
     }
+   
 }
 
 @media (min-width: 1400px) and (max-width: 1401px) {
@@ -879,9 +859,7 @@ footer img {
 }
 
 @media (min-width: 800px) and (max-width: 824px) and (orientation: landscape) {
-    body {
-        background: #A5D7D5 !important;
-    }
+   
     footer {
         position: relative;
         background: #fff;
@@ -902,8 +880,18 @@ footer img {
         font-weight: bold;
         padding: 15px 40px !important;
     }
+    body{
+        background: #A5D7D5 !important
+    }
 }
 
+@media (max-width: 320px) {
+    .forgotP {
+        position: relative;
+        bottom: -5px;
+        left: 85px;
+    }
+}
 @media (max-width: 320px) {
     .forgotP {
         position: relative;

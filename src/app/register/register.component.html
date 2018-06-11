@@ -53,7 +53,7 @@
   </div>
   <div class="checkbox col-xs-12 col-sm-12 col-md-12 col-lg-12" [class.has-error]="terms.touched && terms.invalid">
       <label>
-      <input type="checkbox" name='terms' formControlName="terms">Please tick here to confirm that you have read and understood our website Terms of Use and Privacy and Cookie Policy
+      <input type="checkbox" name='terms' formControlName="terms">Please tick here to confirm that you have read and understood our website <a  class="purpleColor" routerLink="terms" NewTab >Terms of Use</a> and <a class="purpleColor" routerLink="privacy" NewTab >Privacy and Cookie Policy</a>
       <!-- <div class="alert alert-danger" *ngIf="terms.touched && terms.invalid">
         <div *ngIf="terms.errors.required || terms.errors.requiredTrue">Terms of Use, Private and Cookie policy is required.</div>
       </div> -->

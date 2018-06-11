@@ -6,7 +6,7 @@ import { Http } from '@angular/http';
 export class CountryService extends DataService {
 
   constructor(http: Http) {
-    super('http://mx2.us/ESH2018/services/Service.aspx', http);
+    super('http://mercksymposiumeshre2018.com/services/Service.aspx', http);
   }
 
 }

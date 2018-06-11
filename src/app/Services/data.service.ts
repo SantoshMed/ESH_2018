@@ -39,7 +39,8 @@ export class DataService {
                 const userV = response.json();
                 if (userV.result.userid !== 0) {
                     localStorage.setItem('token', userV.result.token);
-                    localStorage.setItem('name', userV.result.firstname);
+                    sessionStorage.setItem('name', userV.result.firstname);
+                    sessionStorage.setItem('emial', resource.data.email);
                     return true;
                 } else {
                     return false;

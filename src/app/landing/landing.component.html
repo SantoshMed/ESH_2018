@@ -40,7 +40,7 @@
 
     <div id="myModal" class="modal" *ngIf="isVisible" role="dialog">
         
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" role="document" [ngClass]="{'modal-height': viewMode === 'privacy' || viewMode === 'terms'}">
                 <div class="closeP">
                         <button type="button" class="close" (click)="closePopup()">
                             <span aria-hidden="true">&times;</span>
@@ -48,7 +48,7 @@
                     </div>
             <div class="modal-content">
                 <div class="modal-header noPadding">
-                    <ul class="nav nav-pills bRadiusL">
+                    <ul class="nav nav-pills bRadiusL" [ngClass]="{'hide': viewMode === 'privacy' || viewMode === 'terms'}">
                         <li class="" [class.active]="viewMode === 'signin'">
                             <a (click)="setViewMode('signin')">SIGN IN</a>
                         </li>
@@ -65,6 +65,12 @@
                         <div *ngSwitchCase="'register'">
                             <app-register></app-register>
                         </div>
+                     <!--    <div *ngSwitchCase="'privacy'">
+                            <app-privacy></app-privacy>
+                        </div> -->
+                      <!--   <div *ngSwitchCase="'terms'">
+                            <app-terms></app-terms>
+                        </div> -->
                         <div *ngSwitchDefault>OtherWise</div>
                     </div>
                 </div>
@@ -74,4 +80,4 @@
 
 </div>
 
-<app-footer></app-footer>
+<app-footer class="footerTop"></app-footer>

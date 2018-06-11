@@ -44,7 +44,7 @@ export class RegisterComponent implements OnInit {
         CustomValidations.emailExists(this.service)
       ],
       country: ['', Validators.required],
-      newsLetter: ['', [Validators.required, Validators.requiredTrue]],
+      newsLetter: ['', []],
       terms: ['', [Validators.required, Validators.requiredTrue]],
       newPassword: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required, passwordConfirming]],
@@ -76,6 +76,7 @@ export class RegisterComponent implements OnInit {
       'accesscode': '' + this.form.value.accesscode,
       'country': '' + this.form.value.country,
       'active': true,
+      'newsletter' : this.form.value.newsLetter,
       'token': ''
     };
     const submitData = { 'command': 'CreateUser', 'data': formValue, 'service': 'UserService' };

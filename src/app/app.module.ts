@@ -24,6 +24,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { AuthGuard } from './Services/auth-guard.service';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
+import { NewTabDirective } from './new-tab.directive';
+import { FooterSubComponent } from './footer-sub/footer-sub.component';
 
 
 @NgModule({
@@ -41,7 +45,11 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     LivewebcastComponent,
     NavbarComponent,
     FooterComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    PrivacyComponent,
+    TermsComponent,
+    NewTabDirective,
+    FooterSubComponent
   ],
   imports: [
     BrowserModule,
